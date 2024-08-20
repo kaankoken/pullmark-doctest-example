@@ -172,6 +172,9 @@ fn test_checklist_check() {
         end_heading,
         true,
     );
-    eprintln!("{:?}", result);
-    assert!(result.is_ok());
+
+    assert!(result.is_err());
+
+    // I intentionally failed the test by changing the is_ok to is_err
+    // This way we can see the each events.
 }
